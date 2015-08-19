@@ -20,9 +20,25 @@ def create
 	end		
 end
 
+#GET products/:id
 def show
 	@product= Product.find(params[:id])
 
+end
+
+#GET products/:id/edit
+def edit
+	@product= Product.find(params[:id])
+end
+
+#PATCH products/:id
+def update
+	@product= Product.find(params[:id])
+	if @product.update(product_params)
+		redirect_to '/products', notice: "El producto ha sido modificado con exitó"
+	else
+		render :edit	
+	end 	
 end
 
 

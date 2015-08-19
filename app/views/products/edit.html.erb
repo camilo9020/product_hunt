@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<h1>Editar Producto</h1>
+			<%= form_for @product, url: "/products/#{@product.id}", method: :patch do |f| %>
+				<div class="form-group">
+					<%= f.text_field :name, class: "form-control", placeholder: "Ingresa el nombre"  %>
+				</div>
+				<div class="form-group">
+					<%= f.url_field :url, class: "form-control", placeholder: "Ingresa la url"  %>
+				</div>
+				<div class="form-group">
+					<%= f.text_area :description, class: "form-control", placeholder: "Ingresa la desripción"  %>
+				</div>
+				<div class="form-group">
+					<%= f.submit class: "btn btn-primary btn-lg btn-block" %>
+ 				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
