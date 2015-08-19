@@ -13,16 +13,17 @@
 						<th>Nombre</th>
 						<th>URL</th>
 						<th>Descripción</th>
+						<th>Editar</th>
 					</tr>
 				</thead>
 				<tbody>
-				
 					<%  @products.each do |product| %>
 						<tr>
 							<td><%= product.id %></td>
 							<td><a href="/products/<%= product.id %>"><%= product.name %></a></td>
-							<td><%= product.url %></td>
+							<td><%= product.url %></td>o
 							<td><%= product.description %></td>
+							<td><a href="/products/<%= product.id %>/edit">Editar</a></td>
 						</tr>
 					<% end %>
 				</tbody>
