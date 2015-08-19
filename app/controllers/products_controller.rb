@@ -14,7 +14,7 @@ def create
 	@product= Product.new(product_params)
 	if @product.save
 		
-		redirect_to '/products', notice: "El producto ha sido creado con exitó."
+		redirect_to products_path , notice: "El producto ha sido creado con exitó."
 	else
 		render :new
 	end		
@@ -39,6 +39,12 @@ def update
 	else
 		render :edit	
 	end 	
+end
+
+def destroy
+	product= Product.find(params[:id])	
+	product.destroy
+	redirect_to products_path, notice: "El producto fue eliminado con exitó"
 end
 
 
