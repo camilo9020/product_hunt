@@ -25,6 +25,15 @@ private
 	  end
 	  helper_method :current_user
 
+	  def private_access
+			redirect_to :login unless signed_in?
+	  end
+
+	  def public_access
+	  		redirect_to root_path if signed_in?
+	  	
+	  end
+
 
 
 
