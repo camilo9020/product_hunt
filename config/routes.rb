@@ -1,18 +1,13 @@
 Rails.application.routes.draw do
 
-  # get 'products', to: 'products#index', as: :products
-  # get 'products/new', to: 'products#new', as: :new_product
-  # post 'products', to: 'products#create'
-  # get 'products/:id', to: 'products#show'
-  # get 'products/:id/edit', to: 'products#edit'
-  # patch 'products/:id', to: 'products#update', as: :product
-  # get '/welcome', to: 'welcome#index'
-  # delete 'products/:id', to: 'products#destroy'
+  root 'products#index'
 
-  # resources :products only ó except para incluir solo una rutas especificas
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  
   resources :users, only:[:new, :create]
   resources :products
-  root 'products#index'
+ 
 
  
   
