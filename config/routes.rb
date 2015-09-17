@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   # get 'products', to: 'products#index', as: :products
   # get 'products/new', to: 'products#new', as: :new_product
   # post 'products', to: 'products#create'
@@ -12,9 +11,9 @@ Rails.application.routes.draw do
 
   # resources :products only ó except para incluir solo una rutas especificas
   resources :products
+  root 'products#index'
 
-  get 'welcome', to: 'welcome#index'
-
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

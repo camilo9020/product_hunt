@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   	@product=Product.new
 	
   end
-
+  
 
 def create
 	#paramans= { product: {name: "...", description: "...", url: "..."}}
@@ -38,7 +38,7 @@ def update
 		redirect_to '/products', notice: "El producto ha sido modificado con exitó"
 	else
 		render :edit	
-	end 	
+		end 	
 end
 
 def destroy
