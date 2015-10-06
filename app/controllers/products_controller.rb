@@ -15,10 +15,10 @@ class ProductsController < ApplicationController
   
 
 def create
-	#paramans= { product: {name: "...", description: "...", url: "..."}}
+	#params= { product: {name: "...", description: "...", url: "..."}}
 	@product= Product.new(product_params)
 	if @product.save
-		
+			
 		redirect_to products_path , notice: "El producto ha sido creado con exitó."
 	else
 		render :new
@@ -52,10 +52,10 @@ def destroy
 	redirect_to products_path, notice: "El producto fue eliminado con exitó"
 end
 
-
 private
-def product_params
-	params.require(:product).permit(:name, :url, :description)	
-end
+	def product_params
+		params.require(:product).permit(:name, :url, :description)	
+	end
+
 
 end
