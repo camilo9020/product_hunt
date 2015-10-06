@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
 def create
 	#params= { product: {name: "...", description: "...", url: "..."}}
 	@product= Product.new(product_params)
+	@product.user = current_user
 	if @product.save
 			
 		redirect_to products_path , notice: "El producto ha sido creado con exitó."
