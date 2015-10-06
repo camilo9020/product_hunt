@@ -1,14 +1,33 @@
-<%= form_for @product do |f| %>
-	<div class="form-group">
-		<%= f.text_field :name, class: "form-control", placeholder: "Ingresa el nombre"  %>
-	</div>
-	<div class="form-group">
-		<%= f.url_field :url, class: "form-control", placeholder: "Ingresa la url"  %>
-	</div>
-	<div class="form-group">
-		<%= f.text_area :description, class: "form-control", placeholder: "Ingresa la desripción"  %>
-	</div>
-	<div class="form-group">
-		<%= f.submit class: "btn btn-primary btn-lg btn-block" %>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset">
+			<% if @product.errors.any? %>
+			  <div class="alert alert-danger">
+			    <ul>
+			    <% @product.errors.full_messages.each do |msg| %>
+			      <li><%= msg %></li>
+			    <% end %>
+			    </ul>
+			  </div>
+			<% end %>
+
+
+			<%= form_for @product do |f| %>
+			<div class="form-group">
+				<%= f.text_field :name, class: "form-control", placeholder: "Ingresa el nombre"  %>
+			</div>
+			<div class="form-group">
+				<%= f.url_field :url, class: "form-control", placeholder: "Ingresa la url"  %>
+			</div>
+			<div class="form-group">
+				<%= f.text_area :description, class: "form-control", placeholder: "Ingresa la desripción"  %>
+			</div>
+			<div class="form-group">
+				<%= f.submit "Crear Producto",class: "btn btn-primary btn-lg btn-block" %>
+				</div>
+			<% end %>
 		</div>
-<% end %>
+	</div>
+</div>
+
+
