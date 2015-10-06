@@ -13,6 +13,7 @@
 
 class Product < ActiveRecord::Base
 	belongs_to :user
+	has_many :comments
 	validates :name, :url, presence:true
 
 end
