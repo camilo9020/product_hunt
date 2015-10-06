@@ -1,0 +1,14 @@
+es:
+  errors:
+    messages:
+      blank: "no puede estar en blanco"
+      invalid: "es inválido"
+
+  activerecord:
+    attributes:
+      user:
+        name: "Nombre"
+        password: "Contraseña"
+      product:
+        name: "Nombre"  
+
