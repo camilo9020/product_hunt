@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # para manejar imagenes
 gem "paperclip", "~> 4.3"
-gem 'aws-sdk'
+gem 'aws-sdk', '<2.0'
 
 #manejo de información sensible en el envio de mails
 gem "figaro"
