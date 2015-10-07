@@ -24,6 +24,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # para manejar imagenes
 gem "paperclip", "~> 4.3"
 
+#manejo de información sensible en el envio de mails
+gem "figaro"
+
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
